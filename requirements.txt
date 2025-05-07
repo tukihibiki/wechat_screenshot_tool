@@ -1,0 +1,9 @@
+opencv-python==4.11.0.86
+opencv-contrib-python==4.11.0.86
+pytesseract==0.3.10
+Pillow==10.4.0
+numpy==1.26.0
+tqdm==4.66.2
+concurrent-log-handler==0.9.24
+nvidia-cuda-runtime==12.1
+nvidia-cudnn==8.9.2
