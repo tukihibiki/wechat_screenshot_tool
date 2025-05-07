@@ -32,7 +32,7 @@ def process_video_segment(video_path, save_dir, start_frame, end_frame, min_inte
     """处理视频片段
     Args:
         jump_interval: 跳帧间隔，控制处理帧的频率
-                      例如设置为10表示每10帧处理1帧
+                      例如设置为5表示每5帧处理1帧
     """
     cap = cv2.VideoCapture(video_path)
     cap.set(cv2.CAP_PROP_POS_FRAMES, start_frame)
@@ -97,7 +97,7 @@ def process_video(video_path, save_dir, min_interval=15, max_interval=150, worke
         min_interval: 最小截图间隔帧数，避免连续截图，默认15帧
         max_interval: 最大截图间隔帧数，强制截图间隔，默认120帧
         workers: 线程数，默认12，将视频分割为对应数量的片段
-        jump_interval: 跳帧间隔，处理视频时跳过的帧数，默认10帧(即每10帧处理1帧)
+        jump_interval: 跳帧间隔，处理视频时跳过的帧数，默认5帧(即每5帧处理1帧)
                       增大此值可提高处理速度但可能错过关键帧
                       减小此值可提高精度但会降低处理速度
     """
